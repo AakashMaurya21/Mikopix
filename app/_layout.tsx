@@ -1,39 +1,56 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+// import { Stack } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+// export default function RootLayout() {
+//   return <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: "black" }}}>
+//             {/* <Stack.Screen name="(tabs)" /> */}
+//     </Stack>
+//     ;
+// }
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { Tabs } from "expo-router";
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+return (
+<>
+<StatusBar style="auto" />
+<Tabs screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: "#000", borderColor: "#000", height: 50}, tabBarActiveTintColor: "#1e90ff"}}>
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+<Tabs.Screen name="index"
+options={{
+  tabBarLabel: "Anime",
+  tabBarIcon: ({ color, size }) => <AntDesign name="home" size={size} color={color} />,
+}}
+/>
+<Tabs.Screen name="minimalist" 
+options={{
+  tabBarLabel: "Minimalist",
+  tabBarIcon: ({ color, size }) => <AntDesign name="minussquareo" size={size} color={color} />,
+}}
+/>
+<Tabs.Screen
+        name="storeScreen"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="image"
+        options={{
+          href: null,
+        }}
+      />
+</Tabs>
+</>
+);
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

@@ -1,41 +1,64 @@
 {
   "expo": {
-    "name": "wallpaper-app",
-    "slug": "wallpaper-app",
-    "version": "1.0.0",
+    "name": "MikoPix",
+    "slug": "MikoPix",
+    "version": "1.0.10",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zymogenlabs.mikopix"
     },
     "android": {
+      "permissions": ["READ_MEDIA_IMAGES"],
+      "config": {
+        "requestLegacyExternalStorage": true
+      },
+      "package": "com.zymogenlabs.mikopix",
+      "versionCode": 11,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#00000000"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      ["expo-iap"],
+      "expo-secure-store",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-9969231239797023~8334934367"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a67974e8-ebb8-48fc-b845-d213b5ba228f"
+      }
     }
   }
 }
