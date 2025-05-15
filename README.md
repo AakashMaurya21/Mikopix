@@ -1,50 +1,42 @@
-# Welcome to your Expo app 👋
+# 📱 Mikopix
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Mikopix** is a beautifully designed mobile application that delivers a curated collection of high-quality wallpapers and AI-generated art. Built for performance and aesthetics, Mikopix lets users explore, preview, and download images effortlessly — all while supporting the platform through seamless ad integrations.
 
-## Get started
+![ComfyUI_00052_](https://github.com/user-attachments/assets/b5995ad7-5e79-4f3f-8349-fd1778356df2)
 
-1. Install dependencies
+![ComfyUI_00053_](https://github.com/user-attachments/assets/a5baaf32-8823-4426-bbda-9b4420edb798)
 
-   ```bash
-   npm install
-   ```
+![ComfyUI_00054_](https://github.com/user-attachments/assets/49049406-c4ec-4c28-a5f8-9f894a3e749b)
 
-2. Start the app
+![ComfyUI_00055_](https://github.com/user-attachments/assets/a49d8b3a-2129-4933-a317-0ada880af35e)
 
-   ```bash
-    npx expo start
-   ```
+![ComfyUI_00056_](https://github.com/user-attachments/assets/519c035e-337c-4a8d-83d5-ebdcf77fe78d)
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🌟 Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🖼️ Stunning Wallpapers
+Browse a constantly updated gallery of high-resolution, handpicked and AI-generated wallpapers.
 
-## Get a fresh project
+### 🔍 Smooth Image Preview
+Tap to preview images in full screen with a sleek modal viewer.
 
-When you're ready, run:
+### ⬇️ Easy Downloads
+Download any wallpaper to your device with a single tap. Optimized for quick and reliable saves.
 
-```bash
-npm run reset-project
-```
+### 🎁 Rewarded Ads
+Unlock premium downloads or features by watching Rewarded Interstitial Ads — a non-intrusive way to support the app.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### ⚡ Optimized Performance
+- Fast, responsive UI using Masonry layouts for efficient image loading.
+- Designed to handle large galleries and infinite scrolling without memory issues.
 
-## Learn more
+### 📦 Built with React Native
+Cross-platform compatibility and performance thanks to React Native and modern libraries like:
+- `react-native-google-mobile-ads`
+- `@shopify/flash-list`
+- `expo-file-system` and `expo-media-library`
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
