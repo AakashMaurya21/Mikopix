@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "MikoPix",
+    "slug": "MikoPix",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zymogenlabs.mikopix"
+    },
+    "android": {
+      "permissions": [
+        "READ_MEDIA_IMAGES"
+      ],
+      "config": {
+        "requestLegacyExternalStorage": true
+      },
+      "package": "com.zymogenlabs.mikopix",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#00000000"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      ["expo-iap"]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a67974e8-ebb8-48fc-b845-d213b5ba228f"
+      }
+    }
+  }
+}
